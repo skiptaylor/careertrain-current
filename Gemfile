@@ -20,6 +20,8 @@ gem 'data_mapper', '~> 1.2.0'
 gem 'dm-sqlite-adapter', '~> 1.2.0', group: :development
 gem 'dm-postgres-adapter', '~> 1.2.0', group: :production
 
+gem 'sendgrid-ruby'
+
 gem 'pony', '~> 1.13', '>= 1.13.1'
 
 gem 'prawn', '~> 2.0.1'
