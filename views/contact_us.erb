@@ -50,8 +50,9 @@
 				
 				<div class="control-group">
 					<div class="controls">
+						<% if settings.production? %>
 						<div class="g-recaptcha" data-sitekey="6Les9X4UAAAAAJJXKpfwTPeEEYLMSLIdKi0i86_B" data-callback="enableBtn"></div>
-						<br />
+						<br /><% end %>
 						<input type="submit" id="submit" class="btn btn-primary" value="Submit" />
 					</div>
 				</div>
@@ -71,13 +72,14 @@
 	</div> <!-- /container -->
 </div> <!-- /container-white -->
 
+<% if settings.production? %>	
 <script>
 	document.getElementById("submit").disabled = true;
 	function enableBtn(){
 		document.getElementById("submit").disabled = false;
 	}
 </script>
-			
+		
 <script>
 	document.ready(function() {
 		$("eform").submit(function() {
@@ -85,3 +87,5 @@
 		});
 	});
 </script>
+<% end %>	
+	
