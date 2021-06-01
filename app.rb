@@ -24,7 +24,7 @@ require_directory([
   'routes'
 ])
 
-# Try it now!
+
 configure :production do
   before do
     unless request.request_method == 'POST'
