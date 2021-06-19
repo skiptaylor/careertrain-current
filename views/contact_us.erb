@@ -17,7 +17,7 @@
 					</div>
 				</div>
 				
-				<div class="control-group" id="email_name" style="margin-left: -1017px;">
+				<div class="control-group" id="email_name" style="margin-left: -1717px;">
 					<label class="control-label" for="email">Email name</label>
 					<div class="controls">
 						<input type="text" class="input-xlarge" id="email_name" name="email_name" />
@@ -73,6 +73,7 @@
 </div> <!-- /container-white -->
 
 <% if settings.production? %>	
+
 <script>
 	document.getElementById("submit").disabled = true;
 	function enableBtn(){
@@ -80,12 +81,5 @@
 	}
 </script>
 		
-<script>
-	document.ready(function() {
-		$("eform").submit(function() {
-			$("#email_name").val('');
-		});
-	});
-</script>
 <% end %>	
 	
