@@ -16,6 +16,9 @@
   	<script type="text/javascript" src="js/dependencies/jquery-1.8.0.min.js"></script>
   	<script type="text/javascript" src="js/dependencies/jquery-ui-1.8.22.custom.min.js"></script>
   	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="js/bootstrap-transitions.js"></script>
+	<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
   	<script type="text/javascript" src="js/hide_addressbar.js"></script>
   	<script type="text/javascript" src="js/application.js"></script>
 
@@ -36,15 +39,37 @@
 	  <div class="navbar navbar-inverse nav-grad navbar-static-top" style="border-bottom: 3px solid silver;">
 		  <div class="navbar-inner nav-grad">
 			  <div class="container">
-				  <div class="span12" style="padding: 22px 0px; color: silver; text-shadow: -1px -2px 0 rgba(0, 0, 0, 0.5); font-weight: 300; font-size: 36px;"><img src="img/cd2-circle170.png" />&nbsp;&nbsp;&nbsp;Career Direction 2</div>
+				  <div class="span12" style="padding: 14px 0; color: silver; text-shadow: -1px -2px 0 rgba(0, 0, 0, 0.5); font-weight: 300; font-size: 36px;"><img src="img/cd2-circle170.png" />&nbsp;&nbsp;&nbsp;Career Direction 2</div>
 			  </div>
 		  </div>
 	  </div>
+	  
+	  
 	  <div class="container-white">
 		  <div class="container">	
-			  <div class="row">
+				<div class="row">
+					
+					<div class="span12">
+					
+					
+					
+					
+					<button class="accordion" style="background-color: green; color: white; margin-top: -17px; padding: 6px 18px; text-align: center; border: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; font-size: 1.2em;"><strong>Need to mail scanforms to the publisher for processing?</strong>&nbsp;&nbsp;&nbsp;<i class="icon-chevron-down"></i></button>
+					<div class="panel">
+					<p class="lead" style="margin-bottom: 4px;">There’s a new address, as of OCT 2021:<br />
+						
+					</p>
+					<p><span style="font-size: 1.15em;"><strong>Career Training Concepts, Inc.</strong><br />
+						2060 East Exchange Place, Suite 120<br />
+						Tucker, GA 30084.
+					</p>
+					</div>
+				
+					</div>
+						                        
+					
 				  <div class="span12" style="margin-bottom: 32px;">
-					  <h1 style="margin: 24px 0px 18px 0px;">A Comprehensive Guide To Planning Your Future</h1>
+					  <h1 style="margin: 18px 0px 10px 0px;">A Comprehensive Guide To Planning Your Future</h1>
 					  <p class="lead" style="margin-bottom: 6px;">Guidance for high school students and young adults.</p>
 					  <!-- <p><strong>Career Direction 2</strong> is a no-cost guidance program that has helped over 5 million high school students plan their futures...</p> -->
 				  </div>
@@ -100,3 +125,51 @@
 
 	</body>
 </html>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+<style>
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
