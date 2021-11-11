@@ -12,7 +12,7 @@ class Email
                  body: body)
   end
   
-  def self.requestcd2 school_name, school_address1, school_address2, school_city, school_state, school_zip, first_name, last_name, email, phone
+  def self.requestcd2 school_name, school_address1, school_address2, school_city, school_state, school_zip, first_name, last_name, email, phone, fax
 
     body = ''
     body << "<h4>Request CD2 Program from Educator</h4>"
