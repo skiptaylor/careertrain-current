@@ -53,11 +53,7 @@
 						<label class="horz" for="phone">Phone</label>
 						<input type="text" class="textfield span4 dec" placeholder="Phone" name="phone" id="phone" value="<%= @school.phone %>" /> 
 					</p>
-					<p>
-						<label class="horz" for="fax">Fax</label>
-						<input type="text" class="textfield span4 dec" placeholder="Fax" name="fax" id="fax" value="<%= @school.fax %>" /> 
-					</p>
-				
+					
 					<p>
 						<label class="horz" for="number_seniors">Number of students</label>
 						<input type="text" class="textfield input-small dec" name="number_seniors" id="number_seniors" value="<%= @school.number_seniors %>" /> 
@@ -69,7 +65,10 @@
 						</label>
 					</p>
 					<p style="padding-left: 192px;">
-						<input class="btn btn-small btn-primary" type="submit" value="Submit" />
+						<% if settings.production? %>
+						<div class="g-recaptcha" data-sitekey="6Les9X4UAAAAAJJXKpfwTPeEEYLMSLIdKi0i86_B" data-callback="enableBtn"></div>
+						<br /><% end %>
+						<input class="btn btn-small btn-primary" id="submit" type="submit" value="Submit" />
 					</p>
 				</form>
 			</div>
@@ -85,3 +84,13 @@
 	frmvalidator.addValidation("email","req","Please enter an Email");
 </script>
 
+<% if settings.production? %>	
+
+<script>
+	document.getElementById("submit").disabled = true;
+	function enableBtn(){
+		document.getElementById("submit").disabled = false;
+	}
+</script>
+		
+<% end %>	
