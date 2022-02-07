@@ -455,6 +455,20 @@ div#alert {
 	z-index: 999;
 }
 
+.sec-well {
+	padding: 2px 12px;
+	background-color: #fff;
+	border: 1px solid #d5d5d5;
+	border-left: 4px solid #919191;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+	-webkit-box-shadow:inset 0px 0px 9px rgba(0, 0, 0, 0);
+	-moz-box-shadow:inset 0px 0px 9px rgba(0, 0, 0, 0);
+	box-shadow:inset 0px 0px 9px rgba(0, 0, 0, 0);
+}
+
+
 
 .accordion {
   background-color: #eee;

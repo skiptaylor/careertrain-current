@@ -13,21 +13,14 @@
 				<div class="control-group" id="name-group">
 					<label class="control-label" for="name">Name</label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="name" name="name" />
-					</div>
-				</div>
-				
-				<div class="control-group" id="email_name" style="margin-left: -1717px;">
-					<label class="control-label" for="email">Email name</label>
-					<div class="controls">
-						<input type="text" class="input-xlarge" id="email_name" name="email_name" />
+						<input type="text" class="input-xlarge" id="name" name="name" required />
 					</div>
 				</div>
 		
-				<div class="control-group" id="email-group" style="margin-top: -48px;">
+				<div class="control-group" id="email-group">
 					<label class="control-label" for="email">Email address</label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="email" name="email" />
+						<input type="text" class="input-xlarge" id="email" name="email" required />
 					</div>
 				</div>
 
@@ -44,15 +37,20 @@
 				<div class="control-group" id="msg-group">
 					<label class="control-label" for="msg">Message</label>
 					<div class="controls">
-						<textarea name="msg" id="msg" class="input-xlarge span6" rows="11"></textarea>
+						<textarea name="msg" id="msg" class="input-xlarge span6" rows="11" required></textarea>
 					</div>
 				</div>
 				
 				<div class="control-group">
 					<div class="controls">
-						<% if settings.production? %>
+						
+						<!-- <% if settings.production? %>
 						<div class="g-recaptcha" data-sitekey="6Les9X4UAAAAAJJXKpfwTPeEEYLMSLIdKi0i86_B" data-callback="enableBtn"></div>
-						<br /><% end %>
+						<br /><% end %> -->
+							
+						<div class="sec-well"><h4 style="color: #919191;">Security Question</h4><p style="margin-top: 9px; line-height: 2.3em;">The US flag is red, white, and &nbsp;<input type="text" class="input-small" id="email_name" name="email_name" />&nbsp;.</p>	
+						</div>
+							<br />
 						<input type="submit" id="submit" class="btn btn-primary" value="Submit" />
 					</div>
 				</div>

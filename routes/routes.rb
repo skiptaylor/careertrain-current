@@ -27,8 +27,11 @@ get '/contact_us/?' do
 end
 
 post '/contact_us/?' do
-  if params[:email_name] == ""
-	Pony.mail(
+  params[:email_name].downcase! 
+  params[:email_name].strip! 
+  if params[:email_name] == "blue"
+	
+  Pony.mail(
 		headers: { 'Content-Type' => 'text/html' },
 		to: 'info@careertrain.com, tayloraid@gmail.com',
 		from: 'contactUs@careertrain.com',
@@ -36,6 +39,7 @@ post '/contact_us/?' do
 		body: "#{markdown params[:msg]}<hr />#{params[:name]}<br />#{params[:email]}"
 	)
 	redirect '/thanks'
+  
   end
 end
 
